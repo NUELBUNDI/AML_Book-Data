@@ -1,0 +1,23 @@
+# AML Book — Deep Learning Environment
+# ─────────────────────────────────────────────────────────────────────
+#  docker compose up -d        → start the Jupyter TF container
+#  docker compose logs -f      → watch logs / see the Jupyter URL
+#  docker compose down         → stop (notebooks are kept on disk)
+#
+#  Open: http://localhost:8888
+# ─────────────────────────────────────────────────────────────────────
+
+services:
+  jupyter-tf:
+    build:
+      context: .
+      dockerfile: Dockerfile.deeplearning
+    container_name: aml-deeplearning
+    ports:
+      - "8888:8888"
+    volumes:
+      # Mount the whole project folder — edit notebooks in your IDE, run them here
+      - .:/workspace
+    environment:
+      - TF_CPP_MIN_LOG_LEVEL=2      # suppress TF noise
+    restart: unless-stopped
