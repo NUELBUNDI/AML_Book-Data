@@ -1,0 +1,20 @@
+{
+  "balance_after": 12900,
+  "abs_amount": 11694,
+  "risk_score": 9149,
+  "gps_lat": 8745,
+  "day_of_month": 7915,
+  "gps_lon": 7909,
+  "hour": 6680,
+  "month": 5181,
+  "region_enc": 5061,
+  "log_balance": 4888,
+  "log_amount": 4507,
+  "day_of_week": 3673,
+  "txn_type_enc": 2697,
+  "segment_enc": 1012,
+  "is_debit": 806,
+  "is_night": 647,
+  "is_weekend": 469,
+  "has_gps": 467
+}
