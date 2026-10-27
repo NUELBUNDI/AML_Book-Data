@@ -1,0 +1,42 @@
+# AML Deep Learning Environment
+# Used for Lab 06 (Neural Networks / MLP) and Lab 07 (CNN / X-Ray)
+#
+# Build:  docker compose build
+# Start:  docker compose up -d
+# Stop:   docker compose down
+#
+# Jupyter URL → http://localhost:8888  (no password needed in dev mode)
+
+FROM tensorflow/tensorflow:2.16.1-jupyter
+
+LABEL maintainer="leonida"
+LABEL description="AML Labs 06 & 07 — TensorFlow + Keras + Jupyter"
+
+# Install extra Python packages needed by the labs
+RUN pip install --no-cache-dir \
+    scikit-learn \
+    matplotlib \
+    seaborn \
+    pandas \
+    numpy \
+    optuna \
+    opencv-python-headless \
+    Pillow \
+    tqdm \
+    ipywidgets \
+    jupyterlab
+
+# Working directory inside the container
+WORKDIR /workspace
+
+# Expose Jupyter port
+EXPOSE 8888
+
+# Start Jupyter Lab without a token (for local dev — DO NOT do this in production)
+CMD ["jupyter", "lab", \
+     "--ip=0.0.0.0", \
+     "--port=8888", \
+     "--no-browser", \
+     "--NotebookApp.token=''", \
+     "--NotebookApp.password=''", \
+     "--allow-root"]

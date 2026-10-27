@@ -1,0 +1,46 @@
+artifact_path: /Users/leonida/Documents/AML_Book-Data/lab10_fastapi/mlruns/1/models/m-f78232d405fd43dc9438d6d85643b8c4/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.16.1
+model_id: m-f78232d405fd43dc9438d6d85643b8c4
+model_size_bytes: 936767
+model_uuid: m-f78232d405fd43dc9438d6d85643b8c4
+prompts: null
+run_id: ca4ec1cc0d8740c185bb5d7ea047957c
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "abs_amount", "required": true}, {"type": "double",
+    "name": "log_amount", "required": true}, {"type": "long", "name": "is_debit",
+    "required": true}, {"type": "double", "name": "balance_after", "required": true},
+    {"type": "double", "name": "log_balance", "required": true}, {"type": "double",
+    "name": "risk_score", "required": true}, {"type": "long", "name": "hour", "required":
+    true}, {"type": "long", "name": "day_of_week", "required": true}, {"type": "long",
+    "name": "day_of_month", "required": true}, {"type": "long", "name": "month", "required":
+    true}, {"type": "long", "name": "is_weekend", "required": true}, {"type": "long",
+    "name": "is_night", "required": true}, {"type": "long", "name": "has_gps", "required":
+    true}, {"type": "double", "name": "gps_lat", "required": true}, {"type": "double",
+    "name": "gps_lon", "required": true}, {"type": "long", "name": "txn_type_enc",
+    "required": true}, {"type": "long", "name": "region_enc", "required": true}, {"type":
+    "long", "name": "segment_enc", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-10-12 16:53:42.262565'
