@@ -1,0 +1,23 @@
+{
+  "features": [
+    "abs_amount",
+    "log_amount",
+    "is_debit",
+    "balance_after",
+    "log_balance",
+    "risk_score",
+    "hour",
+    "day_of_week",
+    "day_of_month",
+    "month",
+    "is_weekend",
+    "is_night",
+    "has_gps",
+    "gps_lat",
+    "gps_lon",
+    "txn_type_enc",
+    "region_enc",
+    "segment_enc"
+  ],
+  "target": "is_fraud"
+}
